@@ -61,7 +61,7 @@ fetch(`https://restcountries.com/v3.1/name/${countryName}?fullText=true`)
                     .then(([forBorderData]) => {
                         const borderElement = document.createElement("a")
                         borderElement.classList.add("skeleton")
-                        borderElement.setAttribute("href", `/country.html?name=${forBorderData.name.common}`)
+                        borderElement.setAttribute("href", `country.html?name=${forBorderData.name.common}`)
                         borderElement.innerText = forBorderData.name.common
                         document.querySelector(".border-countries").append(borderElement)
                     })
