@@ -1,6 +1,11 @@
 * {
     box-sizing: border-box;
 }
+img {
+    pointer-events: none;
+    -webkit-user-drag: none;
+    user-select: none;
+}
 
 :root {
     /* light-themes */
