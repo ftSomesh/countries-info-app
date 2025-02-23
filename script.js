@@ -61,7 +61,7 @@ function renderCountries(data) {
         countryCard.href = `country.html?name=${country.name.common}`
 
         const cardHTML = `
-        <div class="skeleton"><img src="${country.flags.svg}" alt="${country.flags.alt ?? country.name.common + "-Flag"}"></div>
+        <div class="skeleton"><img draggable="false" src="${country.flags.svg}" alt="${country.flags.alt ?? country.name.common + "-Flag"}"></div>
         <div class="card-details">
             <h3 class="country-name skeleton">${country.name.common}</h3>
             <p class="skeleton"><b>Population: </b>${country.population.toLocaleString("en-IN")}</p>
