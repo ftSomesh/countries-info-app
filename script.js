@@ -16,7 +16,7 @@ let classes = icon.className
 icon.className = localStorage.icon ?? classes
 
 document.body.className = localStorage.themeState ?? ""
-document.querySelector(".mode").innerText = localStorage.text ?? "Dark Mode"
+document.querySelector(".mode").innerText = localStorage.themeText ?? "Dark Mode"
 
 document.addEventListener("DOMContentLoaded", (e)=> {
     if(search.value != "") {
