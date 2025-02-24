@@ -22,7 +22,7 @@ const icon = document.querySelector("#icon")
 let classes = icon.className
 icon.className = localStorage.themeIcon ?? classes
 document.body.className = localStorage.themeState ?? ""
-document.querySelector(".mode").innerText = localStorage.themeText ?? "Light Mode"
+document.querySelector(".mode").innerText = localStorage.themeText ?? "Dark Mode"
 
 fetch(`https://restcountries.com/v3.1/name/${countryName}?fullText=true`)
     .then((res) => {
