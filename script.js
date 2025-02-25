@@ -77,15 +77,19 @@ function renderCountries(data) {
     }, 1000);
 }
 
-search.addEventListener("input", (e)=> {
-    filterRegion.children[0].selected = "true"
-    const filtered = allDataOfCountries.filter((country)=> {
-        return country.name.common.toLowerCase().includes(search.value.toLowerCase())
-    })
-    renderCountries(filtered)
-    // Using localstorage to fetch data in the beginning
-    localStorage.inputValue = search.value //preserving input value from the user
-    
+let timeout;
+search.addEventListener("input", (e) => {
+    clearTimeout(timeout)
+    timeout = setTimeout(() => {
+        filterRegion.children[0].selected = "true"
+        const filtered = allDataOfCountries.filter((country) => {
+            return country.name.common.toLowerCase().includes(search.value.toLowerCase())
+        })
+        renderCountries(filtered)
+        // Using localstorage to fetch data in the beginning
+        localStorage.inputValue = search.value //preserving input value from the user
+    }, 1000)
+
 })
 // Implementing dark-light mode
 themeChange.addEventListener("click", (e)=> {
