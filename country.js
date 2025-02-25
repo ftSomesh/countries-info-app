@@ -70,7 +70,7 @@ fetch(`https://restcountries.com/v3.1/name/${countryName}?fullText=true`)
         }
         setTimeout(() => {
             document.querySelectorAll(".skeleton").forEach(item => item.classList.remove("skeleton"));
-        }, 1000);
+        }, 100);
 
     })
 
